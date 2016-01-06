@@ -1,5 +1,3 @@
-# rubocop-decko
-Code style checking for [Wagn/Decko](https://github.com/wagn/wagn) files
 # RuboCop Decko
 
 [![Gem Version](https://badge.fury.io/rb/rubocop-decko.svg)](http://badge.fury.io/rb/rubocop-decko)
