@@ -5,20 +5,18 @@ module RuboCop
     module Decko
       # Checks that the lines of a view block don't exceed the allowed maximum
       # @example
-      #   view :editor do |args|
+      #   event :some_event, :store do
       #      ...
       #   end
       class EventLength < Cop
-        include BlockLength
+        include BlockLines
 
         def on_block(node)
-          method, args, body = *node
-          _receiver, method_name, _args = *method
-          return unless method_name == :event
-          check_code_length(node, body)
+          check_block_length node, only: :event
         end
 
         private
+
         def message(length, max_length)
           format('Event has too many lines. [%d/%d]', length, max_length)
         end

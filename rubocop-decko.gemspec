@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
     Code style checking for Wagn/Decko files.
     A plugin for the RuboCop code style enforcing & linting tool.
   end_description
+  spec.date = '2015-01-06'
   spec.homepage = 'http://github.com/xithan/rubocop-decko'
-  spec.authors = ['Philipp Kühl']
+  spec.authors = ['Philipp Kuehl']
   spec.email = ['philipp.kuehl@gmail.com']
   spec.licenses = ['MIT']
 
@@ -28,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.test_files = spec.files.grep(%r{^spec/})
   spec.extra_rdoc_files = ['README.md']
 
-  spec.add_development_dependency('rubocop', '~> 0.31')
+  spec.add_development_dependency('rubocop', '~> 0.45')
   # spec.add_development_dependency('rake', '~> 10.1')
   # spec.add_development_dependency('rspec', '~> 3.0')
   # spec.add_development_dependency('simplecov', '~> 0.8')

@@ -9,13 +9,10 @@ module RuboCop
       #      ...
       #   end
       class ViewLength < Cop
-        include BlockLength
+        include BlockLines
 
         def on_block(node)
-          method, args, body = *node
-          _receiver, method_name, _args = *method
-          return unless method_name == :view
-          check_code_length(node, body)
+          check_block_length node, only: :view
         end
 
         private
